@@ -8,9 +8,10 @@ import android.view.ViewGroup
 import android.widget.ImageView
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
+import com.example.foodsaver.db.FoodDomain
 
 class FoodAdapter(
-    private val list: List<FoodItemModel>,
+    private val list: List<FoodDomain>,
     private val context: Context
 ) : RecyclerView.Adapter<FoodAdapter.FoodViewHolder>() {
 
@@ -22,14 +23,14 @@ class FoodAdapter(
 
     override fun onBindViewHolder(holder: FoodViewHolder, position: Int) {
         val foodItem = list[position]
-        holder.food_image.setImageResource(foodItem.food_image)
-        holder.food_name.text = foodItem.food_name
-        holder.food_price.text = foodItem.food_price
+        holder.food_image.setImageResource(foodItem.pic)
+        holder.food_name.text = foodItem.title
+        holder.food_price.text = foodItem.price
         holder.view.setOnClickListener {
             val intent = Intent(context, FoodDetailActivity::class.java)
-            intent.putExtra("food_name", foodItem.food_name)
-            intent.putExtra("food_price", foodItem.food_price)
-            intent.putExtra("food_image", foodItem.food_image)
+            intent.putExtra("food_name", foodItem.title)
+            intent.putExtra("food_price", foodItem.price)
+            intent.putExtra("food_image", foodItem.pic)
             holder.view.context.startActivity(intent)
         }
     }
@@ -50,9 +51,9 @@ class FoodAdapter(
                 if (position != RecyclerView.NO_POSITION) {
                     val foodItem = list[position]
                     val intent = Intent(context, FoodDetailActivity::class.java).apply {
-                        putExtra("food_name", foodItem.food_name)
-                        putExtra("food_price", foodItem.food_price)
-                        putExtra("food_image", foodItem.food_image)
+                        putExtra("food_name", foodItem.title)
+                        putExtra("food_price", foodItem.price)
+                        putExtra("food_image", foodItem.pic)
                     }
                     view.context.startActivity(intent)
                 }

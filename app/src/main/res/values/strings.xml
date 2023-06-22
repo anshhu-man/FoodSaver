@@ -7,7 +7,7 @@
     <string name="food_name">Food Name</string>
     <string name="food_price">Food Price</string>
     <string name="delivery_info">Delivery info</string>
-    <string name="food_delivery_desc">Delivered between monday aug and thursday 20 from 8pm to 9:32 pm</string>
+    <string name="food_delivery_desc"> We are excited to serve you and provide a seamless ordering experience. As this is your first order with us, we are pleased to inform you that your delivery charge is free of cost. We hope this adds to your convenience and enjoyment of our service.</string>
     <string name="return_policy">Return policy</string>
     <string name="return_policy_txt">All our foods are double checked before leaving our stores so by any case you found a broken food please contact our hotline immediately.</string>
     <string name="order_now">Order Now</string>

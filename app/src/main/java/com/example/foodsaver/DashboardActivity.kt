@@ -27,9 +27,9 @@ class DashboardActivity : AppCompatActivity() {
         tabLayout = findViewById(R.id.food_tab)
         viewPager = findViewById(R.id.food_viewpager)
 
-        tabLayout.addTab(tabLayout.newTab().setText("Restaurants"))     //0
-        tabLayout.addTab(tabLayout.newTab().setText("Grocery"))    //1
-        tabLayout.addTab(tabLayout.newTab().setText("NGO"))    //2
+        tabLayout.addTab(tabLayout.newTab().setText("Restaurants")) //0
+        tabLayout.addTab(tabLayout.newTab().setText("Grocery"))     //1
+        tabLayout.addTab(tabLayout.newTab().setText("NGO"))         //2
         tabLayout.tabGravity = TabLayout.GRAVITY_FILL
 
         val adapter = FoodItemAdapter(supportFragmentManager, tabLayout.tabCount)
